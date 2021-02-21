@@ -1,0 +1,29 @@
+{
+  "name": "BGRM",
+  "description": "Browse and download images on a web page.",
+  "version": "3.0.0",
+  "minimum_chrome_version": "31",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "downloads"
+  ],
+  "browser_action": {
+    "default_icon": "/images/download.png",
+    "default_popup": "/screens/popup.html"
+  },
+  "icons": {
+    "16": "/images/download.png",
+    "48": "/images/download.png",
+    "128": "/images/download.png"
+  },
+  "web_accessible_resources": [
+    "/images/open.png",
+    "/images/download.png"
+  ],
+  "background": {
+    "scripts": [
+      "/src/defaults.js"
+    ]
+  }
+}

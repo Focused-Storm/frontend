@@ -20,11 +20,11 @@
     // Filters
     folder_name: '',
     new_file_name: '',
-    filter_min_width: 0,
+    filter_min_width: 200,
     filter_min_width_enabled: true,
     filter_max_width: 3000,
     filter_max_width_enabled: true,
-    filter_min_height: 0,
+    filter_min_height: 200,
     filter_min_height_enabled: true,
     filter_max_height: 3000,
     filter_max_height_enabled: true,
@@ -39,7 +39,7 @@
     image_min_width: 50,
     image_max_width: 200,
     image_border_width: 3,
-    image_border_color: '#3498db',
+    image_border_color: '#34A82D !important',
   };
 
   for (var option in defaults) {

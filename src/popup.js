@@ -130,14 +130,14 @@ function displayImages() {
       </th>
     </tr>
   `;
-  images_table.append(toggle_all_checkbox_row);
+  // images_table.append(toggle_all_checkbox_row);
 
   const columns = parseInt(ls.columns, 10);
   const columnWidth = `${Math.round((100 * 100) / columns) / 100}%`;
   const rows = Math.ceil(visibleImages.length / columns);
 
   // Tools row
-  const show_image_url ='true';
+  const show_image_url = ls.show_image_url === 'true';
   const show_open_image_button = ls.show_open_image_button === 'true';
   const show_download_image_button = ls.show_download_image_button === 'true';
 
@@ -335,10 +335,6 @@ $('main').append(html`
       <colgroup>
         <col style=${{ width: '45px' }} />
         <col style=${{ width: '40px' }} />
-        <col style=${{ width: '10px' }} />
-        <col />
-        <col style=${{ width: '10px' }} />
-        <col style=${{ width: '40px' }} />
       </colgroup>
 
       ${ls.show_image_width_filter === 'true' &&
@@ -353,43 +349,7 @@ $('main').append(html`
           </td>
 
           <td>
-            <input
-              type="checkbox"
-              id="image_width_filter_min_checkbox"
-              checked=${ls[`filter_min_width_enabled`] === 'true'}
-              onChange=${(e) => {
-                toggleDimensionFilter(
-                  e.target,
-                  `filter_min_width_enabled`,
-                  e.target.checked
-                );
-              }}
-            />
-          </td>
-
-          <td>
             <div id="image_width_filter_slider"></div>
-          </td>
-
-          <td>
-            <input
-              type="checkbox"
-              id="image_width_filter_max_checkbox"
-              checked=${ls[`filter_max_width_enabled`] === 'true'}
-              onChange=${(e) => {
-                toggleDimensionFilter(
-                  e.target,
-                  `filter_max_width_enabled`,
-                  e.target.checked
-                );
-              }}
-            />
-          </td>
-
-          <td style=${{ textAlign: 'right' }}>
-            <label for="image_width_filter_max_checkbox">
-              <small id="image_width_filter_max"></small>
-            </label>
           </td>
         </tr>
       `}
@@ -405,43 +365,7 @@ $('main').append(html`
           </td>
 
           <td>
-            <input
-              type="checkbox"
-              id="image_height_filter_min_checkbox"
-              checked=${ls[`filter_min_height_enabled`] === 'true'}
-              onChange=${(e) => {
-                toggleDimensionFilter(
-                  e.target,
-                  `filter_min_height_enabled`,
-                  e.target.checked
-                );
-              }}
-            />
-          </td>
-
-          <td>
             <div id="image_height_filter_slider"></div>
-          </td>
-
-          <td>
-            <input
-              type="checkbox"
-              id="image_height_filter_max_checkbox"
-              checked=${ls[`filter_max_height_enabled`] === 'true'}
-              onChange=${(e) => {
-                toggleDimensionFilter(
-                  e.target,
-                  `filter_max_height_enabled`,
-                  e.target.checked
-                );
-              }}
-            />
-          </td>
-
-          <td style=${{ textAlign: 'right' }}>
-            <label for="image_height_filter_max_checkbox">
-              <small id="image_height_filter_max"></small>
-            </label>
           </td>
         </tr>
       `}

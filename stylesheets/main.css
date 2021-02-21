@@ -1,12 +1,12 @@
 :root {
-  --foreground: #333;
+  --foreground: #181818;
   --foregroundLight: #999;
 
-  --neutral: #ccc;
+  --neutral: #256920;
   --neutralLight: #fff;
 
-  --accent: #3498db;
-  --accentDark: #2791d9;
+  --accent: #34A82D;
+  --accentDark: #34A82D;
 
   --success: #25a75c;
   --successLight: #28b463;
@@ -18,10 +18,6 @@
   --dangerLight: #e74c3c;
 }
 
-body {
-  font: 13px/1.5em 'Lucida Grande', Arial, sans-serif;
-  color: var(--foreground);
-}
 
 .left {
   float: left;
@@ -70,12 +66,14 @@ hr {
 
 /* images */
 img {
+  border-radius: 5px;
   box-sizing: border-box;
   transition: border-color 0.15s;
+  border-color: #696969 !important;
 }
 
 img:hover {
-  border-color: var(--neutral);
+  border-color: var(--neutral) !important;
 }
 
 /* inputs */
@@ -90,6 +88,7 @@ select {
 input[type='button'],
 input[type='checkbox'] {
   cursor: pointer;
+  color: #181818 !important;
 }
 
 input[type='button'] {
@@ -144,17 +143,43 @@ input[type='button'].danger:active {
   background: var(--danger);
 }
 
+
+/* =============== Scrollbar =============== */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #88aa88; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #34A82D; 
+}
+/* =============== ========= =============== */
+
 label {
   cursor: pointer;
   display: inline-flex;
 }
 
 body {
+  font: 13px/1.5em 'Lucida Grande', Arial, sans-serif;
   margin: 0;
-  padding: 0 2px 0 0; /* compensate for browser defaults */
+  padding: 0px 2px 0 0; /* compensate for browser defaults */
   min-width: 200px;
   min-height: 150px;
   box-sizing: border-box;
+  background-color: #181818;
+  color: white;
 }
 
 .grid {
@@ -173,13 +198,15 @@ body {
 }
 
 #filters_container {
-  position: fixed;
+  position: absolute;
   top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   box-sizing: border-box;
-  width: 100%;
-  padding: 2px 2px 2px 0; /* compensate for browser defaults */
-  background: #fff;
-  border-bottom: 1px solid #ccc;
+  width: 90%;
+  padding: 10px 5px 5px 0; /* compensate for browser defaults */
+  background: #181818;
+  color: white;
 }
 
 #filters_container input[type='text'],
@@ -193,11 +220,15 @@ body {
 #images_cache {
   display: none;
 }
+
 #images_table {
-  margin-top: 2px;
+  margin-top: 25px;
 }
+
 #images_table img {
   cursor: pointer;
+  margin: 10px !important;
+  padding: 5px;
 }
 
 .open_image_button,
@@ -205,8 +236,12 @@ body {
   width: 24px;
   height: 24px;
   cursor: pointer;
-
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#download_button {
+  border-radius: 5px !important;
+  color: white !important;
 }

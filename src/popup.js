@@ -270,8 +270,6 @@ function downloadImages() {
     checkedImages.forEach((checkedImage) => {
       chrome.downloads.download({ url: checkedImage });
     });
-
-    flashDownloadingNotification(ls.image_count);
   }
 }
 

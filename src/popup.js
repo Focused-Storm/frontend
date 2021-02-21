@@ -335,6 +335,8 @@ $('main').append(html`
       <colgroup>
         <col style=${{ width: '45px' }} />
         <col style=${{ width: '40px' }} />
+        <col/>
+        <col style=${{ width: '40px' }} />
       </colgroup>
 
       ${ls.show_image_width_filter === 'true' &&
@@ -351,6 +353,13 @@ $('main').append(html`
           <td>
             <div id="image_width_filter_slider"></div>
           </td>
+
+          <td style=${{ textAlign: 'right' }}>
+            <label for="image_width_filter_max_checkbox">
+              <small id="image_width_filter_max"></small>
+            </label>
+          </td>
+
         </tr>
       `}
       ${ls.show_image_height_filter === 'true' &&
@@ -367,6 +376,13 @@ $('main').append(html`
           <td>
             <div id="image_height_filter_slider"></div>
           </td>
+
+          <td style=${{ textAlign: 'right' }}>
+            <label for="image_height_filter_max_checkbox">
+              <small id="image_height_filter_max"></small>
+            </label>
+          </td>
+
         </tr>
       `}
     </table>

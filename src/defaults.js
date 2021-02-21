@@ -36,8 +36,8 @@
     show_open_image_button: false,
     show_download_image_button: false,
     columns: 2,
-    image_min_width: 50,
-    image_max_width: 200,
+    image_min_width: 200,
+    image_max_width: 300,
     image_border_width: 3,
     image_border_color: '#34A82D !important',
   };

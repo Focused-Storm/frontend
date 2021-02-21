@@ -59,7 +59,7 @@
   top: -4px;
 }
 .noUi-horizontal.noUi-extended {
-  background-color: #333;
+  background-color: #696969;
 
   padding: 0 6px;
 }
@@ -86,10 +86,10 @@
 /* Styling;
  */
 .noUi-background {
-  background: #333;
+  background: #696969;
 }
 .noUi-connect {
-  background: #44B43D;
+  background: #333;
   -webkit-transition: background 450ms;
   transition: background 450ms;
 }

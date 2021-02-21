@@ -173,9 +173,9 @@ label {
 
 body {
   font: 13px/1.5em 'Lucida Grande', Arial, sans-serif;
-  margin: 0;
+  margin: 20px;
   padding: 0px 2px 0 0; /* compensate for browser defaults */
-  min-width: 200px;
+  min-width: 400px;
   min-height: 150px;
   box-sizing: border-box;
   background-color: #181818;
@@ -198,15 +198,18 @@ body {
 }
 
 #filters_container {
-  position: absolute;
-  top: 0px;
+  position: fixed;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box;
   width: 90%;
-  padding: 10px 5px 5px 0; /* compensate for browser defaults */
+  padding: 12px 15px 10px 15px; /* compensate for browser defaults */
   background: #181818;
   color: white;
+  border: 3px solid #585858;
+  border-radius: 5px;
+  box-shadow: #181818 0px -20px 60px 30px;
 }
 
 #filters_container input[type='text'],

@@ -205,7 +205,7 @@ body {
   box-sizing: border-box;
   width: 90%;
   padding: 12px 15px 10px 15px; /* compensate for browser defaults */
-  background: #181818;
+  background: #282828;
   color: white;
   border: 3px solid #585858;
   border-radius: 5px;
@@ -231,7 +231,7 @@ body {
 #images_table img {
   cursor: pointer;
   margin: 10px !important;
-  padding: 5px;
+  padding: 5.5px;
 }
 
 .open_image_button,

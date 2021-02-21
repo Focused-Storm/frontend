@@ -270,7 +270,19 @@ function downloadImages() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        console.log(this.responseText);
+
+        console.log("RECV::");
+        console.log("URL: " + this.responseURL);
+        // console.log("Text:: " +  this.responseText);
+        console.log("END!!");
+
+        // const bob = this.response.blob()
+        // const url = URL.createObjectURL(bob)
+
+        // let recvImgURL = 'data:image/png;base64,' + this.response;
+        // chrome.downloads.download({ url: './processed.png' });
+
+
       }
     };
 
@@ -290,6 +302,10 @@ function downloadImages() {
 
         // xhttp.open("GET", "https://www.w3schools.com/js/ajax_info.txt", true);
         // xhttp.send();
+
+        setTimeout(function(){ chrome.downloads.download({ url: 'https://i.imgur.com/MQydSEn.jpg' }); }, 1500);
+        
+        // chrome.downloads.download({ url: "data:image/png;base64,R0lGODlhDAAMAKIFAF5LAP/zxAAAANyuAP/gaP///wAAAAAAACH5BAEAAAUALAAAAAAMAAwAAAMlWLPcGjDKFYi9lxKBOaGcF35DhWHamZUW0K4mAbiwWtuf0uxFAgA7" });
 
         // chrome.downloads.download({ url: checkedImage });
       }

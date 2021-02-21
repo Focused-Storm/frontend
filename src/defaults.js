@@ -38,7 +38,7 @@
     columns: 2,
     image_min_width: 200,
     image_max_width: 300,
-    image_border_width: 3,
+    image_border_width: 3.4,
     image_border_color: '#34A82D !important',
   };
 

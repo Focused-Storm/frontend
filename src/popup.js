@@ -137,7 +137,7 @@ function displayImages() {
   const rows = Math.ceil(visibleImages.length / columns);
 
   // Tools row
-  const show_image_url = ls.show_image_url === 'true';
+  const show_image_url ='true';
   const show_open_image_button = ls.show_open_image_button === 'true';
   const show_download_image_button = ls.show_download_image_button === 'true';
 
@@ -267,9 +267,33 @@ function downloadImages() {
     }
     ls.image_count = checkedImages.length;
     ls.image_number = 1;
-    checkedImages.forEach((checkedImage) => {
-      chrome.downloads.download({ url: checkedImage });
-    });
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log(this.responseText);
+      }
+    };
+
+    let imgUrl = "";
+    checkedImages.forEach(
+      (checkedImage) => {
+        console.log(checkedImage);
+
+        xhttp.open("POST", "http://ec2-18-208-82-134.compute-1.amazonaws.com:8080/", true);
+        xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        imgUrl = "url=" + checkedImage;
+        xhttp.send(imgUrl);
+
+        // xhttp.open("POST", "https://www.w3schools.com/js/demo_post2.asp", true);
+        // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        // xhttp.send("fname=Henry&lname=Ford");
+
+        // xhttp.open("GET", "https://www.w3schools.com/js/ajax_info.txt", true);
+        // xhttp.send();
+
+        // chrome.downloads.download({ url: checkedImage });
+      }
+    );
   }
 }
 

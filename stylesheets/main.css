@@ -201,9 +201,26 @@ body {
   width: 100%;
 }
 
-#filters_container {
+#topBar {
   position: fixed;
-  top: 15px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+
+}
+
+#logoAndName {
+  text-align: center;
+  position:relative;
+  background: #181818;
+  z-index: 1;
+}
+
+#filters_container {
+  position:relative;
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box;
@@ -213,7 +230,7 @@ body {
   color: white;
   border: 3px solid #585858;
   border-radius: 5px;
-  box-shadow: #181818 0px -20px 60px 30px;
+  box-shadow: #181818 0px -40px 60px 30px;
 }
 
 #filters_container input[type='text'],
@@ -229,7 +246,7 @@ body {
 }
 
 #images_table {
-  margin-top: 25px;
+  margin-top: 75px;
 }
 
 #images_table img {

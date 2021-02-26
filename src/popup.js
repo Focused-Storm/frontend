@@ -314,13 +314,14 @@ function downloadImages() {
 }
 
 $('main').append(html`
+  <div id="topBar">
+  <div id="logoAndName"><img id="logo" src="/images/download.png" alt=""/><img id="name" src="/images/Focus.png" alt=""/></div>
   <div id="filters_container">
     <table id="filter_inputs_container" class="grid">
       <colgroup>
         <col />
         <col style=${{ width: '100px' }} />
       </colgroup>
-
       <tr>
         <td>
           <input
@@ -403,7 +404,7 @@ $('main').append(html`
       `}
     </table>
   </div>
-
+  </div>
   <div id="images_cache"></div>
 
   <table id="images_table" class="grid"></table>
@@ -493,6 +494,22 @@ jss.set('img', {
   'min-width': `${ls.image_min_width}px`,
   'max-width': `${ls.image_max_width}px`,
   'border-width': `${ls.image_border_width}px`,
+  'border-style': 'solid',
+  'border-color': '#f6f6f6',
+});
+jss.set('#logo', {
+  'min-width': `50px`,
+  'max-width': `50px`,
+  'border-width': `0px`,
+  'border-style': 'solid',
+  'border-color': '#f6f6f6',
+});
+jss.set('#name', {
+  'min-width': `50px`,
+  'max-width': `500px`,
+  'min-height': `50px`,
+  'max-height': `50px`,
+  'border-width': `0px`,
   'border-style': 'solid',
   'border-color': '#f6f6f6',
 });

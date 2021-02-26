@@ -357,7 +357,7 @@ $('main').append(html`
 
       ${ls.show_image_width_filter === 'true' &&
       html`
-        <tr id="image_width_filter">
+        <tr id="image_width_filter" style=${{display:'none'}}>
           <td>Width:</td>
 
           <td style=${{ textAlign: 'right' }}>
@@ -380,7 +380,7 @@ $('main').append(html`
       `}
       ${ls.show_image_height_filter === 'true' &&
       html`
-        <tr id="image_height_filter">
+        <tr id="image_height_filter" style=${{display:'none'}}>
           <td>Height:</td>
 
           <td style=${{ textAlign: 'right' }}>

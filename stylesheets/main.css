@@ -171,11 +171,15 @@ label {
   display: inline-flex;
 }
 
+tr {
+  text-align: center;
+}
+
 body {
   font: 13px/1.5em 'Lucida Grande', Arial, sans-serif;
   margin: 20px;
   padding: 0px 2px 0 0; /* compensate for browser defaults */
-  min-width: 400px;
+  min-width: 300px;
   min-height: 150px;
   box-sizing: border-box;
   background-color: #181818;

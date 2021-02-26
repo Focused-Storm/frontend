@@ -132,8 +132,8 @@ function displayImages() {
   `;
   // images_table.append(toggle_all_checkbox_row);
 
-  const columns = parseInt(ls.columns, 10);
-  const columnWidth = `${Math.round((100 * 100) / columns) / 100}%`;
+  const columns = 1;
+  const columnWidth = 300;
   const rows = Math.ceil(visibleImages.length / columns);
 
   // Tools row

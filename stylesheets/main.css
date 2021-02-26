@@ -152,17 +152,17 @@ input[type='button'].danger:active {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #383838; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #88aa88; 
+  background: var(--accent); 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #34A82D; 
+  background: var(--neutral); 
 }
 /* =============== ========= =============== */
 

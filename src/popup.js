@@ -323,13 +323,10 @@ $('main').append(html`
   <table id="images_table" class="grid"></table>
   <div id="filters_container">
     <table id="filter_inputs_container" class="grid">
-      <colgroup>
-        <col />
-        <col style=${{ width: '100px' }} />
-      </colgroup>
+
       <tr>
         <td>
-          <input
+          <input style=${{display:'none'}}
             type="text"
             placeholder="SAVE TO SUBFOLDER"
             title="Set the name of the subfolder you want to download the images to."

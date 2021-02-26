@@ -338,7 +338,7 @@ $('main').append(html`
         </td>
 
         <td>
-          <input
+          <input style=${{width:'200px'}}
             type="button"
             id="download_button"
             class="accent"

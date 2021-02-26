@@ -316,6 +316,11 @@ function downloadImages() {
 $('main').append(html`
   <div id="topBar">
   <div id="logoAndName"><img id="logo" src="/images/download.png" alt=""/><img id="name" src="/images/Focus.png" alt=""/></div>
+  </div>
+
+  <div id="images_cache"></div>
+
+  <table id="images_table" class="grid"></table>
   <div id="filters_container">
     <table id="filter_inputs_container" class="grid">
       <colgroup>
@@ -404,10 +409,6 @@ $('main').append(html`
       `}
     </table>
   </div>
-  </div>
-  <div id="images_cache"></div>
-
-  <table id="images_table" class="grid"></table>
 `);
 
 chrome.downloads.onDeterminingFilename.addListener(suggestNewFilename);

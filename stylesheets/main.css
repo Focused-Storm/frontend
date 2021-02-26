@@ -209,10 +209,11 @@ body {
   box-sizing: border-box;
   width: 100%;
   text-align: center;
-
+  border-bottom: 2px solid var(--neutral);
 }
 
 #logoAndName {
+  padding: 8px 5px 0px 5px; /* compensate for browser defaults */
   text-align: center;
   position:relative;
   background: #181818;
@@ -220,17 +221,16 @@ body {
 }
 
 #filters_container {
-  position:relative;
+  position:fixed;
+  bottom:0px;
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
   padding: 12px 15px 10px 15px; /* compensate for browser defaults */
   background: #282828;
   color: white;
-  border: 3px solid #585858;
-  border-radius: 5px;
-  box-shadow: #181818 0px -40px 60px 30px;
+  border-top: 2px solid var(--neutral);
 }
 
 #filters_container input[type='text'],
@@ -246,7 +246,7 @@ body {
 }
 
 #images_table {
-  margin-top: 75px;
+  margin-top:10px;
 }
 
 #images_table img {
